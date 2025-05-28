@@ -168,7 +168,8 @@ Dapat dilihat tidak ada value yang bernilai 0 pada kolom numerik
 
 ### One Hot Encoding
 Encoding dilakukan terhadap smoking_history dan one hot encoding dilakukan terhadap gender
-![encode](https://github.com/user-attachments/assets/6422f87d-aa0d-44a2-8da7-958de2f04be3)
+![encode](https://github.com/user-attachments/assets/55979b1e-2d0e-4879-93a5-8ae9f21cbd81)
+
 
 
 
@@ -239,7 +240,8 @@ Selanjutnya, metrik evaluasi yang digunakan berdasarkan label-label yang diketah
 
 ### Penerapan Matriks Confusion, Akurasi, dan Recall
 ## Model Logistic Regression 
-![image](https://github.com/user-attachments/assets/7bd2a86c-2fad-41af-b388-5650b861b2d5)
+![image](https://github.com/user-attachments/assets/07da2fab-6939-4540-9bfd-1d2854141c1a)
+
 Menggunakan Logistic Regression :
 
 1. 15610 responden nondiabetes telah diklasifikasikan dengan benar
@@ -247,7 +249,8 @@ Menggunakan Logistic Regression :
 3. 1498 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
 4. 335 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
 ## Model KNN
-![image](https://github.com/user-attachments/assets/ea77e66e-29b5-4540-9c45-d8fa1a5b95bf)
+![image](https://github.com/user-attachments/assets/04582b40-5878-4af6-9c2b-1ec4d8500f40)
+
 Menggunakan K-Nearest Neighbor :
 
 1. 15753 responden nondiabetes telah diklasifikasikan dengan benar
@@ -255,7 +258,9 @@ Menggunakan K-Nearest Neighbor :
 3. 1355 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
 4. 339 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
 ## Model Random Forest
-![image](https://github.com/user-attachments/assets/b75ad4c7-4e03-4a03-b353-efb662c976b4)
+![image](https://github.com/user-attachments/assets/d6b8d48e-84e6-4500-95f3-43298901ae51)
+
+
 Menggunakan Random Forest :
 
 1. 16754 responden nondiabetes telah diklasifikasikan dengan benar
