@@ -49,7 +49,7 @@ diabetes | 0: tidak diabetes, 1: diabetes
 
 | Jumlah Baris | Jumlah Kolom |
 --------|-------
-| 70000 | 12 |
+| 100000 | 9 |
 
 ### Deskripsi Statistik dari Data
 ![deskripsi_statistik](https://github.com/user-attachments/assets/70d656a2-d5cf-4db2-be71-e42948ab73eb)
