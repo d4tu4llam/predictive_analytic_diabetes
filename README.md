@@ -239,47 +239,47 @@ Selanjutnya, metrik evaluasi yang digunakan berdasarkan label-label yang diketah
 
 ### Penerapan Matriks Confusion, Akurasi, dan Recall
 ## Model Logistic Regression 
-![image](https://github.com/user-attachments/assets/04b5db95-7599-4173-9db4-46fbd9617643)
+![image](https://github.com/user-attachments/assets/7bd2a86c-2fad-41af-b388-5650b861b2d5)
 Menggunakan Logistic Regression :
 
-1. 15590 responden nondiabetes telah diklasifikasikan dengan benar
-2. 1364 responden diabetes telah diklasifikasikan dengan benar
-3. 1518 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
-4. 325 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
+1. 15610 responden nondiabetes telah diklasifikasikan dengan benar
+2. 1354 responden diabetes telah diklasifikasikan dengan benar
+3. 1498 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
+4. 335 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
 ## Model KNN
-![image](https://github.com/user-attachments/assets/baec57a4-1e06-46eb-b8de-419914570e8b)
+![image](https://github.com/user-attachments/assets/ea77e66e-29b5-4540-9c45-d8fa1a5b95bf)
 Menggunakan K-Nearest Neighbor :
 
-1. 15981 responden nondiabetes telah diklasifikasikan dengan benar
-2. 1329 responden diabetes telah diklasifikasikan dengan benar
-3. 1127 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
-4. 360 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
+1. 15753 responden nondiabetes telah diklasifikasikan dengan benar
+2. 1350 responden diabetes telah diklasifikasikan dengan benar
+3. 1355 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
+4. 339 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
 ## Model Random Forest
 ![image](https://github.com/user-attachments/assets/b75ad4c7-4e03-4a03-b353-efb662c976b4)
 Menggunakan Random Forest :
 
-1. 16791 responden nondiabetes telah diklasifikasikan dengan benar
-2. 1227 responden diabetes telah diklasifikasikan dengan benar
-3. 317 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
-4. 462 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
+1. 16754 responden nondiabetes telah diklasifikasikan dengan benar
+2. 1244 responden diabetes telah diklasifikasikan dengan benar
+3. 354 responden nondiabetes diklasifikasikan sebagai responden diabetes (False Positif)
+4. 445 responden diabetes diklasifikasikan sebagai responden nondiabetes (False negatif)
 
 #### Hasil Evaluasi
-Dari seluruh akurasi yang diketahui dari ketiga model. Model Random Forest lah yang paling bagus dalam akurasi dan recall
+Metrik evaluasi yang aka digunakan adalah akurasi dan recall. Berdasarkan classification report dan confusion matrix diatas. Model yang mempunyai akurasi paling bagus adalah Random Forest, namun pada kelas diabetes model ini mempunyai recall 0.74. Sedangkan pada rana kesehatan mengidentifikasi recall seringkali lebih penting karena melewatkan kasus positif diabetes bisa fatal. Penyakit yang seharusnya dapat ditangani dini bisa menyebabkan kematian. Oleh karena itu penulis memutuskan bahwa model yang terbaik adalah KNN dengan akurasi (0.9099) dan recall pada kelas diabetes (0.80). 
 
 
-![image](https://github.com/user-attachments/assets/7a494f42-63fc-45c6-866b-4627c9047ce4)
+![feature_import](https://github.com/user-attachments/assets/f9a80039-1194-44ae-a468-7e3ffd6c9b6c)
 
 Fitur paling penting menurut random forest adalah HbA1c_level yaitu tingkat gula dalam darah 2-3 bulan terakhir
 
 ## Kesimpulan
 1. Berdasarkan data yang diperoleh, menunjukan bahwa 2 faktor yang sangat berpengaruh seseorang terkena penyakit diabetes ,yaitu tekanan darah HbA1c_level, tingkat gula darah saat ini. Disimpulkan bahwa seseorang jika ingin mencegah diabetes harus menjaga gula darahnya rendah baik itu dengan olahragaa maupun mengurangi konsumsi gula.
+
 2. Seluruh pasien diabetes memiliki kesamaan dalam beberapa faktor, yaitu
    * memiliki kadar glukosa lebih dari rata-rata batas normal.
    * memiliki kadar HbA1c_level lebih dari rata-rata batas normal.
    * umur rentang 30 tahun sampai 80 tahun.
    
-3. Setelah menguji data menggunakan 3 diperoleh model *XGBoost* merupakan model terbaik dibandingkan model lainnya berdasarkan skor akurasi, skor F1, dan jumlah kesalahan klasifikasi yang paling sedikit.
-
+3. Setelah menguji data menggunakan 3 diperoleh model KNN merupakan model terbaik dibandingkan model lainnya berdasarkan skor akurasi dan recall
 ## Referensi
 [1] World Health Organization. (2021). Diabetes Fact Sheet. https://www.who.int/news-room/fact-sheets/detail/diabetes
 
