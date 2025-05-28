@@ -166,7 +166,7 @@ dari output diatas didapati bahwa tidak terdapat missing value pada dataset, tet
 
 Dapat dilihat tidak ada value yang bernilai 0 pada kolom numerik
 
-### Encode Kolom kategorikal dan One Hot Encoding
+### One Hot Encoding
 Encoding dilakukan terhadap smoking_history dan one hot encoding dilakukan terhadap gender
 ![encode](https://github.com/user-attachments/assets/6422f87d-aa0d-44a2-8da7-958de2f04be3)
 
