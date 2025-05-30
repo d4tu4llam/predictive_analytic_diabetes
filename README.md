@@ -51,6 +51,26 @@ diabetes | 0: tidak diabetes, 1: diabetes
 --------|-------
 | 100000 | 9 |
 
+#### mengecek data duplikasi
+![duplikat](https://github.com/user-attachments/assets/e1a3412e-d58f-4e80-b6e9-40b3927673af)
+<br>
+
+Dari gambar di atas terdapat 6001 duplikasi data. Data ini akan dihapus pada bagian data preparation
+
+#### mengecek missing values
+![missing](https://github.com/user-attachments/assets/e7a61a91-e7ca-4b89-b47d-68e54d1f1aa9)
+<br>
+dari output diatas didapati bahwa tidak terdapat missing value pada dataset, tetapi harus dicek apakah terdapat nilai nol pada tiap kolom. <br>
+![value_0](https://github.com/user-attachments/assets/121a2b23-05f1-4513-ae14-ac644f9b49f6)
+<br>
+Dapat dilihat tidak ada value yang bernilai 0 pada kolom numerik
+
+#### Mengecek Outliers
+![Outliers](https://github.com/user-attachments/assets/4f8696a2-863c-42e0-95b8-b6110c165a8d)
+
+Terdapat outlier pada BMI, namun menurut saya ini bukanlah kesalahan data melainkan banyaknya kelas diabetes yang biasanya diindikasikan dengan bmi yang tinggi.
+Outlier akan dipertahankan untuk mempertahankan informasi pada data.
+
 ### Deskripsi Statistik dari Data
 ![deskripsi_statistik](https://github.com/user-attachments/assets/70d656a2-d5cf-4db2-be71-e42948ab73eb)
 
@@ -69,14 +89,14 @@ Dari informasi diatas, disimpulkan bahwa data ini mencakup orang yang berumu 1-8
 
 Berikut merupakan kolom yang termasuk dalam variabel numerikal maupun kategorikal. <br>
 Kolom numerik: ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level'] <br>
-Kolom kategorik: ['gender', 'smoking_history', 'hypertension', 'heart_disease', 'diabetes'] <br>
+Kolom kategorik: ['', 'smoking_history', 'hypertension', 'heart_disease', 'diabetes'] <br>
 Berikut visualisasi kolom kategorik<br>
 
 ![analisis_kategorik](https://github.com/user-attachments/assets/d35bf915-ba97-4c78-a9cd-01a6c4cde8dc)
 
 
 Dari plot-plot diatas didapat informasi:
-  1. Dari Plot Gender, pasien mayoritas perempuan dengan sangat sedikit yang menolak menjawab yaitu other
+  1. Dari Plot , pasien mayoritas perempuan dengan sangat sedikit yang menolak menjawab yaitu other
   2. Dari plot Smoking History, mayoritas pasien tidak pernah merokok dan no info. 
   3. Dari plot Hipertensi, mayoritas tidak hipertensi
   4. Dari plot Penyakit Jantung, mayoritas tidak sakit jantung
@@ -144,18 +164,28 @@ Dari Correlation Matrix Heatmap diatas:
 
 
 ## Data Preparation
+### Preparasi untuk analisis
+![umur](https://github.com/user-attachments/assets/a33c0758-c647-46d3-b957-e817683052bb)
+<br>
+Data age dibulatkan ke atas untuk yang berusia 1 tahun di bawah dan dibulatkan terdekat untuk usia lainnya
+
+![grouping](https://github.com/user-attachments/assets/5275d4ee-f3cc-4846-ada2-f2807bfc6dcd)
+<br>
+Terlalu banyak value pada kategorik smoking history, hal ini cukup membingungkan jadi dilakukan grouping menjadi non_smoker, current_smoker dan past_smoker
+
 ### Data Cleaning
-### Menghilangkan gender "Other" 
-![other](https://github.com/user-attachments/assets/573e74d1-bd72-4a03-adbd-322fa59be594)<br>
+#### Menghilangkan gender "Other" 
+![other](https://github.com/user-attachments/assets/573e74d1-bd72-4a03-adbd-322fa59be594)
+<br>
 Data yang memiliki gender "Other" Sangat kecil 
 
-#### mengecek data duplikasi
+#### Menangani data duplikasi
 ![duplikat](https://github.com/user-attachments/assets/e1a3412e-d58f-4e80-b6e9-40b3927673af)
+
 <br>
+Dari pengecekan sebelumnya terdapat 6001 data duplikat, kemudian kita menghapusnya dengan .drop_duplicates()
 
-Terdapat 6001 data duplikat, kemudian kita menghapusnya dengan .drop_duplicates()
-
-#### mengecek missing values
+#### Menangani missing values
 ![missing](https://github.com/user-attachments/assets/e7a61a91-e7ca-4b89-b47d-68e54d1f1aa9)
 
 <br>
@@ -167,6 +197,7 @@ dari output diatas didapati bahwa tidak terdapat missing value pada dataset, tet
 Dapat dilihat tidak ada value yang bernilai 0 pada kolom numerik
 
 ### One Hot Encoding
+
 Encoding dilakukan terhadap smoking_history dan one hot encoding dilakukan terhadap gender
 ![encode](https://github.com/user-attachments/assets/55979b1e-2d0e-4879-93a5-8ae9f21cbd81)
 
